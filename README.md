@@ -8,7 +8,7 @@ one and only one word from the input list. Each entry in the `words` file should
 be the word from the input that contains the corresponding 4 letter sequence in
 the `sequences` file.
 
-## Initial Thoughts/Concerns?
+## Initial Thoughts/Concerns
 
 * Do we differentiate between upper and lower case letters?
 * How do we handle non-letter characters (e.g., apostrophes, commas)? Do we
