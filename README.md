@@ -80,6 +80,9 @@ You may also run the specs with:
     bundle exec rspec
 
 
+*Note*: You will need Ruby >= 1.9 to run these examples.
+
+
 ## Final Thoughts
 
 As stated above, if I were going to do some one-off text processing I would
