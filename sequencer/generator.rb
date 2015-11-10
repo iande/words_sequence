@@ -1,5 +1,5 @@
 module Sequencer
-  class SequenceGenerator
+  class Generator
     def initialize(seq_len)
       @sequence_length = seq_len
     end

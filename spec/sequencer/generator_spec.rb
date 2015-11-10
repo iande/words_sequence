@@ -1,8 +1,6 @@
 require_relative '../../sequencer/generator'
 
 describe Sequencer::Generator do
-  subject { Sequencer::Generator.new(4) }
-
   it 'generates sequences of a specified length' do
     gen_3 = Sequencer::Generator.new(3)
     gen_5 = Sequencer::Generator.new(5)
