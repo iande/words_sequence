@@ -90,12 +90,14 @@ As stated above, if I were going to do some one-off text processing I would
 probably put together a quick script such as the one found in `simple.rb`,
 especially if the results didn't require complete accuracy. With the overkill
 solution, I have created classes to demonstrate my testing practices, and
-it's probably a bit much in case. I debated using a dedicated object to track
+it's probably a bit much in this case. I debated using a dedicated object to track
 the counts and first word occurrence of the sequences instead of the simple
-hash seen on line 38 of `sequencer/processor.rb`, but I felt that might be
-a bit gratuitous and I wanted to wrap up both solutions in a single sitting.
+hash seen on [line 38](https://github.com/iande/words_sequence/blob/master/sequencer/processor.rb#L38)
+of `sequencer/processor.rb`, but I felt that might be a bit gratuitous and I
+wanted to wrap up both solutions in a single sitting.
 
 If I needed to generalize this further, I would probably factor out the
-reduction step (lines 21-24 of `sequencer/processor.rb`) and consider
-supporting custom output handlers -- for example, alphabetizing the
-sequence output (while preserving the associated words.)
+reduction step ([lines 21-24](https://github.com/iande/words_sequence/blob/master/sequencer/processor.rb#L21)
+of `sequencer/processor.rb`) and consider supporting custom output handlers --
+for example, alphabetizing the sequence output (while preserving the
+associated words.)
