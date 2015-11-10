@@ -13,7 +13,8 @@ the `sequences` file.
 * Do we differentiate between upper and lower case letters?
   - Assume so since the requirements said (A-z), and I think entries like
     'Muslim', 'muslim' and 'muslin' appear in `dictionary.txt` to demonstrate
-    this exact point.
+    this exact point. For a case insensitive approach, revert commit
+    [82e9a1f](https://github.com/iande/words_sequence/commit/82e9a1fe4dd01df821c71a76feacfd64915bd637).
 * How do we handle non-letter characters (e.g., apostrophes, commas)? Do we
   simply reject substrings that contain them (e.g., "who's" has no candidate
   sequences because "who'" and "ho's" both contain an apostrophe) or do we
