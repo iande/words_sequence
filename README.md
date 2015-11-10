@@ -11,12 +11,16 @@ the `sequences` file.
 ## Initial Thoughts/Concerns
 
 * Do we differentiate between upper and lower case letters?
+  - Assume so since the requirements said (A-z), and I think entries like
+    'Muslim', 'muslim' and 'muslin' appear in `dictionary.txt` to demonstrate
+    this exact point.
 * How do we handle non-letter characters (e.g., apostrophes, commas)? Do we
   simply reject substrings that contain them (e.g., "who's" has no candidate
   sequences because "who'" and "ho's" both contain an apostrophe) or do we
   omit the punctuation (e.g., "what're" yields "what", "hatr", and "atre".)
 * Whitespace padding and input sanitation in general.
-* What about when the sequence is repeated within a word?
+* What about when the sequence is repeated within a word? (e.g., alfalfa)
+* What about repeated words? (e.g., cornish, Cornish)
 
 The basic idea could be represented as:
 
@@ -51,7 +55,7 @@ us more flexibility and better separates configuration and implementation.
 ## Simple Solution
 
 A solution based around the code above can be found in `simple.rb`. It
-assumes sequences are case-insensitive and rejects any sequence that contains
+assumes sequences are case-sensitive and rejects any sequence that contains
 non-letter characters. It, hopefully, demonstrates that I can write a quick
 script to do some one-off processing. However, it would be a pain to work this
 into any automated testing system.

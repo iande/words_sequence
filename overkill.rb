@@ -4,13 +4,13 @@ require_relative './sequencer'
 
 # Normalize sequence generators by removing leading and trailing whitespace
 # and downcasing
-normalizer = Sequencer::Normalizer.new { |s| s.strip.downcase }
+normalizer = Sequencer::Normalizer.new { |s| s.strip }
 
 # Generate sequences of 4 characters
 generator = Sequencer::Generator.new(4)
 
 # Only consider sequences that are made up of letters
-filter = Sequencer::Filter.new { |seq| seq =~ /\A[a-z]+\z/ }
+filter = Sequencer::Filter.new { |seq| seq =~ /\A[a-z]+\z/i }
 
 # Create and configure the processor
 processor = Sequencer::Processor.new
