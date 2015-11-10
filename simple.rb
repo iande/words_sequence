@@ -1,3 +1,5 @@
+require 'set'
+
 words = File.readlines('./dictionary.txt')
 candidates = { }
 
@@ -6,7 +8,7 @@ words.each do |word|
   word.chars.each_cons(4) do |seq_arr|
     sequence = seq_arr.join.downcase
     next unless sequence =~ /\A[a-z]+\z/
-    candidates[sequence] ||= []
+    candidates[sequence] ||= Set.new
 
     candidates[sequence] << word
   end
